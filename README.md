@@ -9,7 +9,7 @@ This is a simple library implementation for Grakkit (or other GraalVM implementa
 
 ```JavaScript
 // Loads the jar
-const client = core.load('./plugins/grakkit/fetchClient.jar', 'fetch.fetchClient') 
+const client = core.load('./plugins/grakkit/fetchClient.jar', 'fetch.FetchClient') 
 
 // Adds the plugin; needed to fix async issues
 client.setPlugin(core.plugin)
