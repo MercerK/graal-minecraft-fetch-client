@@ -42,14 +42,14 @@ public class FetchClient {
 	/**
 	 * @author: CraftJS
 	 */
-  private void runSync(Runnable task) { 
+	private void runSync(Runnable task) {
 		if (this.plugin instanceof Plugin) {
 			Bukkit.getScheduler().runTask(plugin, task);
 		} else {
 			throw new Error("Plugin is undefined. You must set the plugin by using `setPlugin`.");
 		}
 	}
-	
+
 	/**
 	 * @author: CraftJS
 	 */
@@ -63,7 +63,7 @@ public class FetchClient {
 			builder = builder.headers(headers);
 		}
 		HttpRequest request = builder.build();
-		
+
 		// Return JS object that can be used for creating a promise
 		// We're collecting entire response body to string before resolving
 		// In future, headers should be made available before body is awaited
