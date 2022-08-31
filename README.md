@@ -7,7 +7,7 @@ This is a simple library implementation for Grakkit (or other GraalVM implementa
 * Add library file to your grakkit folder, such as `./plugins/grakkit`
 * Add the following:
 
-```
+```JavaScript
 // Loads the jar
 const client = core.load('./plugins/grakkit/fetchClient.jar', 'fetch.fetchClient') 
 
@@ -17,7 +17,7 @@ client.setPlugin(core.plugin)
 
 * Once declared, you can start using it.
 
-```
+```JavaScript
 // Example
 console.log((await client.fetch('https://api.publicapis.org/entries', 'GET', '', [])).body())
 ```
@@ -29,6 +29,11 @@ There are a total of four parameters (all required).
 * Payload: This is the string payload. For empty, you can do `''`.
 * Headers: This accepts headers in an flat array. 
   * Example: `['Content-Type', 'application/json; charset=utf-8']`
+
+# Build it yourself
+
+* Clone repo locally.
+* Run `./gradlew shadowJar`
 
 # Resources
 
